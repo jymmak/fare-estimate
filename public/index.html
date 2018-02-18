@@ -7,18 +7,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FARE ESTIMATE</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="vendors/materialize/css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Faresearch</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a href="sass.html">Sass</a>
+        </li>
+        <li>
+          <a href="badges.html">Components</a>
+        </li>
+        <li>
+          <a href="collapsible.html">JavaScript</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+  <section>
+    <div id="map"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-sm-5 search">
+          <form class="form-inline">
+            <div class="form-group col-md-4">
+              <label for="origin">Origen</label>
+              <input id="origin" type="text" class="form-control" placeholder="Introduce una ubicacion">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="destination">Destino</label>
+              <input id="destination" type="text" class="form-control" placeholder="Introduce una ubicacion">
+            </div>
+            <div>
+              <button id="btnIndication" class="btn btn-primary">Ruta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
+  </section>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy4Xx0uzXTf9dnk9n0BqpvhNe0il7Gd4Q&callback=initMap&libraries=places"
+    async defer></script>
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
   <script src="js/app.js"></script>
+
 </body>
 
 </html>

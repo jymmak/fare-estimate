@@ -1,0 +1,23 @@
+{
+  "name": "fare-estimate",
+  "version": "1.0.0",
+  "description": "¿Has usado Uber o alguna otra app de taxis en alguna ocasión? Si en caso no, Uber relata cómo nació esta idea en su sitio web pero les dejamos un extracto para entrar en contexto:  En una tarde nevada de París en 2008, Travis Kalanick y Garrett Camp tuvieron problemas para conseguir un taxi. Así que se les ocurrió una idea simple: tocar un botón para llamar a un auto.\r Bueno, ahora que ya tienes una idea de qué trata, ahora vamos a experimentar con su API y Google Maps.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jymmak/fare-estimate.git"
+  },
+  "author": "Pamela Rojas & Jymma Mogollon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jymmak/fare-estimate/issues"
+  },
+  "homepage": "https://github.com/jymmak/fare-estimate#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
