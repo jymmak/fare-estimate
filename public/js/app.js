@@ -23,8 +23,28 @@ let calculateAndDisplayRoute = (directionsService, directionsDisplay) => {
 };
 
 function initMap() {
+
+  var lineSymbol = {
+     path: 'M 0,-1 0,1',
+     strokeOpacity: 1,
+     scale: 4
+   };
+
+  var polylineDotted = new google.maps.Polyline({
+       	strokeColor: '#000000',
+        strokeOpacity: 0,
+        fillOpacity: 0,
+        icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '20px'
+        }],
+      });
   let directionsService = new google.maps.DirectionsService;
-  let directionsDisplay = new google.maps.DirectionsRenderer;
+  let directionsDisplay = new google.maps.DirectionsRenderer({
+    polylineOptions: polylineDotted
+});
+
   let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
     center: {
@@ -38,37 +58,7 @@ function initMap() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
   autocompleteInputs();
-  // asociando evento a elemento del DOM 
+  // asociando evento a elemento del DOM
   btnRoad.addEventListener('click', initRoad);
 
-  function buscar() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(funcionGo, funcionError);
-    }
-  }
-
-  document.getElementById('locat').addEventListener('click', buscar);
-  let latitud, longitud;
- 
-
-  let funcionGo = function (posicion) {
-    latitud = posicion.coords.latitude;
-    longitud = posicion.coords.longitude;
-
-    let miUbicacion = new google.maps.Marker({
-      position: { lat: latitud, lng: longitud },
-      animation: google.maps.Animation.DROP,
-      map: map,
-  
-    });
-
-    map.setZoom(11);
-    map.setCenter({ lat: latitud, lng: longitud });
-  }
-
-  let funcionError = function (error) {
-    alert('tenemos un problema con encontrar tu ubicación');
-  }
-
 }
-
