@@ -35,7 +35,7 @@ Bueno, ahora que ya tienes una idea de qué trata, ahora vamos a experimentar co
 
 ## Producto
 
-![](public/assets/images/.png)
+![](public/assets/image/readmeImage.png)
 
 
 ## Licencia
