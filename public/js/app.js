@@ -49,7 +49,7 @@ function initMap() {
 
   document.getElementById('locat').addEventListener('click', buscar);
   let latitud, longitud;
- 
+
 
   let funcionGo = function (posicion) {
     latitud = posicion.coords.latitude;
@@ -59,7 +59,7 @@ function initMap() {
       position: { lat: latitud, lng: longitud },
       animation: google.maps.Animation.DROP,
       map: map,
-  
+
     });
 
     map.setZoom(11);
