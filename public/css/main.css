@@ -33,3 +33,23 @@ label{
   color: black;
   font-size: 1.5rem;
 }
+
+.price-style{
+  background-color:rgb(4, 4, 46);
+  color: white;
+}
+
+li{
+  font-size: 1.2rem;
+}
+span{
+  margin-left: 8%;
+}
+
+.panel-prices{
+  width: 25%;
+  background-color: white;
+  position: absolute;
+  margin-top: 25%;
+   margin-left: 8.2%;
+}

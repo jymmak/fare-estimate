@@ -2,6 +2,7 @@ let inputFrom = document.getElementById('origin');
 let inputTo = document.getElementById('destination');
 let btnRoad = document.getElementById('btnIndication');
 
+
 let autocompleteInputs = () => {
   new google.maps.places.Autocomplete(inputFrom);
   new google.maps.places.Autocomplete(inputTo);
